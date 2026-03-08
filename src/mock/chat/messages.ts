@@ -1,0 +1,58 @@
+export const mockMessages = [
+  {
+    name: "Emily Johnson",
+    lastMessage: "Did you check the latest update?",
+    seeMessage: false,
+    isOnline: true,
+    hours: "07:45 am",
+  },
+  {
+    name: "Michael Brown",
+    lastMessage: "I'll send the files in a minute.",
+    seeMessage: true,
+    isOnline: false,
+    hours: "08:30 am",
+  },
+  {
+    name: "Sophia Williams",
+    lastMessage: "Can we reschedule the meeting?",
+    seeMessage: false,
+    isOnline: true,
+    hours: "09:12 am",
+  },
+  {
+    name: "Daniel Martinez",
+    lastMessage: "The deployment was successful.",
+    seeMessage: true,
+    isOnline: false,
+    hours: "10:05 am",
+  },
+  {
+    name: "Olivia Davis",
+    lastMessage: "Please review the document.",
+    seeMessage: true,
+    isOnline: true,
+    hours: "11:48 am",
+  },
+  {
+    name: "James Anderson",
+    lastMessage: "I'm working on the fix.",
+    seeMessage: false,
+    isOnline: false,
+    hours: "01:17 pm",
+  },
+  {
+    name: "Isabella Thomas",
+    lastMessage: "Thanks for the quick response!",
+    seeMessage: true,
+    isOnline: true,
+    hours: "02:26 pm",
+  },
+  {
+    name: "William Taylor",
+    lastMessage: "Let me know if you need help.",
+    seeMessage: false,
+    isOnline: false,
+    hours: "04:03 pm",
+  },
+];

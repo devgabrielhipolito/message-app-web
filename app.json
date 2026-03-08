@@ -9,8 +9,7 @@
     "newArchEnabled": true,
     "splash": {
       "image": "./assets/splash-icon.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "resizeMode": "contain"
     },
     "ios": {
       "supportsTablet": true
@@ -21,10 +20,15 @@
         "backgroundColor": "#ffffff"
       },
       "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "package": "com.driverbeyond.message"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      "expo-font",
+      "@react-native-community/datetimepicker"
+    ]
   }
 }
