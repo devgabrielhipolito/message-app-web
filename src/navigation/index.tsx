@@ -9,13 +9,14 @@ import { useEffect, useRef } from "react";
 import { LoginScreen } from "../screen/LoginScreen";
 import { Private } from "../screen/PrivateScreen/PrivateScreen";
 import { RoutesPublic } from "./routesPublic";
+import { StackRoutesPrivates } from "./stacks/stack.routes";
 
 export function Navigation() {
   const hasUser = useSelector((s: RootState) => s.user.acessToken);
 
   const Stack = createStackNavigator();
   const navigationRef = useRef<NavigationContainerRef<any>>(null);
-  const routerCurrently = !hasUser ? "private" : "Public";
+  const routerCurrently = hasUser ? "private" : "Public";
   useEffect(() => {
     if (navigationRef.current?.isReady()) {
       const currentRoute = navigationRef.current.getCurrentRoute();
@@ -37,7 +38,7 @@ export function Navigation() {
         initialRouteName={routerCurrently}
       >
         <Stack.Screen name="Public" component={RoutesPublic} />
-        <Stack.Screen name="private" component={Private} />
+        <Stack.Screen name="private" component={StackRoutesPrivates} />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -18,7 +18,7 @@ type ChatProps = {
 interface CardUserProps {
   urlImage?: string;
   name: string;
-  isOnline: boolean;
+  isOnline?: boolean;
   chat?: ChatProps;
   mapFriends?: MapFriendsProps;
   propsStyles?: ViewStyle;

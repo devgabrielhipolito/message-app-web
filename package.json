@@ -47,6 +47,7 @@
   "devDependencies": {
     "@types/react": "~19.1.0",
     "@types/redux-persist": "^4.3.1",
+    "babel-plugin-module-resolver": "^5.0.2",
     "reactotron-react-native": "^5.1.18",
     "reactotron-redux": "^3.2.1",
     "typescript": "~5.9.2"

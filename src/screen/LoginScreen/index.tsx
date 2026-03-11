@@ -1,22 +1,21 @@
 import { StyleSheet, Text, View } from "react-native";
 
-import {
-  useNavigation
-} from "@react-navigation/native";
+import { useNavigation } from "@react-navigation/native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import {
-  RootStackNavigationProp
-} from "../../navigation/types/routes";
+import { RootStackNavigationProp } from "../../navigation/types/routes";
 import { Colors } from "../../utils/colors";
 import { FormLogin } from "./components/FormLogin";
 import { HeaderLogin } from "./components/HeaderLogin";
+import { TextCustom } from "../../components/TextCustom";
 
 export function LoginScreen() {
   const navigation = useNavigation<RootStackNavigationProp>();
 
   return (
     <SafeAreaView style={styles.container}>
-      <View style={styles.logo}></View>
+      <View>
+        <TextCustom value="Welcome" />
+      </View>
       <HeaderLogin />
       <FormLogin />
       <Text style={styles.textRegister}>
@@ -37,7 +36,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "white",
     gap: 20,
-    padding: 2,
+    padding: 10,
   },
   textRegister: {
     gap: 10,
@@ -46,9 +45,5 @@ const styles = StyleSheet.create({
   },
   register: {
     color: Colors.primary,
-  },
-  logo: {
-    height: 150,
-    backgroundColor: "gray",
   },
 });

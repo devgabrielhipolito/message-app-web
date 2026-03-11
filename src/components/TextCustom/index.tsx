@@ -1,5 +1,5 @@
 import { Text, TextStyle } from "react-native";
-import { Colors } from "../../utils/colors";
+import { colors, Colors } from "../../utils/colors";
 import {
   FontFamilyType,
   FontSizeType,
@@ -12,7 +12,7 @@ interface TextCustomProps {
   weight?: FontWeightType;
   style?: TextStyle;
   fontFamily?: keyof FontFamilyType;
-  color?: keyof typeof Colors;
+  color?: string;
 }
 
 export function TextCustom({
@@ -21,14 +21,14 @@ export function TextCustom({
   weight,
   style,
   fontFamily = "openSansregular",
-  color = "black",
+  color = colors.gray[20],
 }: TextCustomProps) {
   return (
     <Text
       style={[
         {
           fontSize: size,
-          color: Colors[color],
+          color: color,
           fontWeight: weight,
           fontFamily: fontFamily,
         },

@@ -1,18 +1,16 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 export type UserState = {
-  firstName: string;
+  fullName: string;
   email: string;
-  lastName: string;
   birthday: string;
-  acessToken: string;
+  acessToken: string | null;
 };
 
 const userState: UserState = {
   email: "",
+  fullName: "",
   birthday: "",
-  firstName: "",
-  lastName: "",
   acessToken: "",
 };
 
@@ -20,11 +18,14 @@ const userSlice = createSlice({
   initialState: userState,
   name: "USER-AUTH",
   reducers: {
-    setUser: (_, action: PayloadAction<UserState>) => {
+    setUser: (state, action: PayloadAction<UserState>) => {
       return action.payload;
+    },
+    exitUuser: (state) => {
+      state.acessToken = null;
     },
   },
 });
 
-export const { setUser } = userSlice.actions;
+export const { setUser, exitUuser } = userSlice.actions;
 export default userSlice.reducer;

@@ -1,3 +1,4 @@
+import { LucideIcon } from "lucide-react-native";
 import {
   ActivityIndicator,
   StyleSheet,
@@ -5,8 +6,7 @@ import {
   TouchableOpacity,
   TouchableOpacityProps,
 } from "react-native";
-import { Colors } from "../../utils/colors";
-import { LucideIcon } from "lucide-react-native";
+import { colors } from "../../utils/colors";
 
 type Props = TouchableOpacityProps & {
   onPress: () => void;
@@ -34,7 +34,7 @@ export function Button({ onPress, name, isLoading, ...rest }: Props) {
 
 const style = StyleSheet.create({
   button: {
-    backgroundColor: Colors.primary,
+    backgroundColor: colors.gray[900],
     alignItems: "center",
     borderRadius: 10,
     width: "100%",

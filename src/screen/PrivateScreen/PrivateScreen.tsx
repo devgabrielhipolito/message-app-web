@@ -8,13 +8,15 @@ import {
   Map as MapIcon,
   MessageCircle,
   User2,
+  UserRoundSearch,
 } from "lucide-react-native";
 import { Chat } from "./Chat";
-import {  MapScreen } from "./MapScreen";
+import { MapScreen } from "./MapScreen";
 import { MapFriends } from "./MapFriends";
 import { Notify } from "./Notify";
 import { ProfileScreen } from "./Profile";
 import { configTabOptions } from "../../navigation/configRoutes/configScreens";
+import SearchFriend from "./SearchFriend";
 
 export function Private() {
   const { Navigator, Screen } = createBottomTabNavigator();
@@ -50,6 +52,16 @@ export function Private() {
         component={Notify}
         options={{
           tabBarIcon: ({ color, size }) => <Bell color={color} size={size} />,
+        }}
+      />
+
+      <Screen
+        name="SearchFriends"
+        component={SearchFriend}
+        options={{
+          tabBarIcon: ({ color, size }) => (
+            <UserRoundSearch color={color} size={size} />
+          ),
         }}
       />
       <Screen
